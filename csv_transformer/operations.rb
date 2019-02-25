@@ -85,7 +85,7 @@ module CsvTransformer
         {
           column: column,
           operation: 'gsub',
-          target: "/#{t}/",
+          target: '/' + t + '/',
           result: value_arr[i].to_s
         }
       end

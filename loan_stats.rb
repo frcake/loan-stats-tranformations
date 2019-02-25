@@ -36,7 +36,8 @@ csv_operations.static_operations.each do |oper|
     if col_value.nil?
       0
     else
-      col_value.send(oper[:operation], oper[:target], oper[:result])
+      p oper[:target] if oper[:column] == 'home_ownership'
+      col_value.send(oper[:operation], (oper[:target]).to_s, (oper[:result]).to_s)
     end
   end
 end
